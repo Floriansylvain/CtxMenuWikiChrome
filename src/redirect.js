@@ -6,7 +6,7 @@ var contextMenuButton = {
 chrome.contextMenus.create(contextMenuButton);
 chrome.contextMenus.onClicked.addListener(function(clickData, tab){
   if (clickData.menuItemId == "wdim" && clickData.selectionText){
-    word = clickData.selectionText;
+    var word = clickData.selectionText;
     if (word.length < 24) {
       chrome.tabs.create({url:"https://wikipedia.org/wiki/" + word});
     } else {
