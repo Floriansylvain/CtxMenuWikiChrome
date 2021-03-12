@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "WhatDoesItMean",
+  "version": "0.0.1",
+
+  "description": "Highlight a word, right clic and select 'What does it mean?' to find its Wikipedia definition.",
+  "icons": {
+    "16":"wikipedia16.png",
+    "48":"wikipedia48.png",
+    "128":"wikipedia128.png"
+  },
+
+  "browser_action": {
+    "default_icon":"wikipedia16.png"
+  },
+
+  "background": {
+    "scripts": ["redirect.js"],
+    "presistent": false
+  },
+
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "activeTab"
+  ]
+}
